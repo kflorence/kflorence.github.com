@@ -1,1 +1,23 @@
-kflorence@github
+<html>
+  <head>
+    <title>comato.se</title>
+
+    <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <script language="javascript" type="text/javascript">
+      jQuery(function($) {
+          $.ajax({
+            url: "http://github.com/api/v2/json/repos/show/kflorence",
+            dataType: "json",
+            success: function(data) {
+              console.log(data);
+            },
+            error: function(xhr, status, exception) {
+              console.log(xhr, status, exception);
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
