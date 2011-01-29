@@ -1,59 +1,18 @@
 <html>
   <head>
     <title>comato.se</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-    <script language="javascript" type="text/javascript">
-      jQuery(function($) {
-          var $repositories = $("#repositories"),
-            $fragments = {
-              repository: $([
-                '<li>',
-                  '<h3 class="name"><a class="link"></a> <span class="language"></span></h3>',
-                  '<div class="information"></div>',
-                  '<div class="description"></div>',
-                '</li>'
-              ].join(""))
-            };
-
-          $.ajax({
-            url: "http://github.com/api/v2/json/repos/show/kflorence",
-            dataType: "jsonp",
-            success: function(response) {
-              $.each(response.repositories, function(i, repository) {
-                var $repository = $fragments.repository.clone();
-
-                $(".link", $repository).text(repository.name).attr({
-                  href: repository.url,
-                  title: repository.name
-                });
-
-                if (repository.language) {
-                  $(".language", $repository).text(repository.language);
-                }
-
-                $(".information", $repository).text(
-                  repository.forks + " forks, " +
-                  repository.watchers + " watchers" +
-                  (repository.open_issues ? ", " +
-                    repository.open_issues + " issues" : "")
-                );
-
-                $(".description", $repository).text(repository.description);
-
-                $repositories.append($repository);
-              });
-            },
-            error: function(xhr, status, exception) {
-              console.log(xhr, status, exception);
-            }
-          });
-      });
-    </script>
+    <script language="javascript" type="text/javascript" src="js/repositories.js"></script>
   </head>
   <body>
-    <h1>Comato.se</h1>
+    <h1>comato.se <span>project listing</span></h1>
 
-    <ul id="repositories"></ul>
+    <div id="main">
+      <ul id="repositories"></ul>
+    </div>
+
+    <p id="footer">copyright &copy; 2011 <a href="http://kflorence.com/">kyle florence</a></p>
   </body>
 </html>
