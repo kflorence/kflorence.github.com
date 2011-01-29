@@ -7,7 +7,7 @@
       jQuery(function($) {
           $.ajax({
             url: "http://github.com/api/v2/json/repos/show/kflorence",
-            dataType: "json",
+            dataType: "jsonp",
             success: function(data) {
               console.log(data);
             },
