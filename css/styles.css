@@ -4,77 +4,102 @@ body {
   font-family: helvetica, tahoma, sans-serif;
   font-size: 62.5%; /* 10px */
   line-height: 1.4em;
-  border-left: #3E94D1 10px solid;
+  background: #fff url(../images/bg.gif) repeat-y;
 }
 
-a:link, a:active {
-  color: #FF4500;
+a {
+  color: #333;
+  text-decoration: none;
 }
 
-a:hover, a:visited {
-  color: #A62D00;
+a:hover {
+  text-decoration: underline;
 }
 
 h1 {
+  background-color: #666;
+  color: #fff;
   margin: 0;
-  padding: 5px 10px;
-  color: #3E94D1;
-  font-size: 3.2em;
-  line-height: 1.8em;
-  background-color: #f4f4f4;
-}
-
-h1 span {
-  color: #aaa;
-  font-size: x-small;
-  vertical-align: super;
-}
-
-h2 {
-  margin: 0;
-  padding: 10px 0;
-  color: #000;
-  font-size: 1.0em;
-  font-weight: normal;
-}
-
-h2 a {
+  padding: 10px;
   font-size: 1.4em;
-  font-weight: bold;
-}
-
-h2 span {
-  vertical-align: super;
+  text-align: right;
 }
 
 ul {
   margin: 0;
-  padding: 0 0 0 20px;
-  list-style: none;
+  padding: 0;
+  list-style-type: none;
 }
 
-ul li.last {
-  border: 0;
+#wrapper {
+  font-size: 1.1em;
 }
 
-#main {
-  width: 800px;
-  margin-left: -10px;
-  border-left: #65A5D1 10px solid;
+#left {
+  float: left;
+  width: 350px;
 }
 
-.information {
+#right {
+  background-color: #fff;
+  border-left: #aaa 10px solid;
+  margin-left: 350px;
+}
+
+#repositories {
+  background-color: #ddd;
+  border-right: #eee 10px solid;
+  padding: 10px;
+  width: 600px;
+}
+
+#repositories h2 {
+  color: #fff;
+  font-size: 1.4em;
+  float: left;
+  margin: 0 0 10px 0;
+}
+
+#repositories .information {
   color: #666;
+  float: right;
+  font-weight: bold;
 }
 
-.description {
-  color: #000;
+#repositories .information li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+#repositories .information .watchers a {
+  background: transparent url(../images/watchers.png) 0 -5px no-repeat;
+  padding-left: 20px;
+}
+
+#repositories .information .forks a {
+  background: transparent url(../images/forks.png) 0 -5px no-repeat;
+  padding-left: 20px;
+}
+
+#repositories .description {
+  -moz-border-radius: 4px;
+  background-color: #fff;
+  border: #aaa 1px solid;
+  clear: both;
+  color: #666;
   font-size: 1.2em;
   padding: 10px;
+  margin: 10px 0;
 }
 
-#footer {
-  margin: 0;
-  padding: 10px;
-  background-color: #f4f4f4;
+#repositories .last .description {
+  margin-bottom: 0;
+}
+
+.loading {
+  -moz-border-radius: 4px;
+  background: #fff url(../images/loading.gif) 10px 50% no-repeat;
+  border: #aaa 1px solid;
+  padding: 10px 10px 10px 36px;
+  margin: 10px;
 }

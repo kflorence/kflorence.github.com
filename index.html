@@ -1,18 +1,22 @@
 <html>
   <head>
-    <title>comato.se</title>
+    <title>kflorence @ github.com</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
     <script language="javascript" type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-    <script language="javascript" type="text/javascript" src="js/repositories.js"></script>
+    <script language="javascript" type="text/javascript" src="js/github.repositories.js"></script>
   </head>
   <body>
-    <h1>comato.se <span>project listing</span></h1>
+    <div id="wrapper">
+      <div id="left">
+        <h1>kflorence @ github.com</h1>
+      </div>
 
-    <div id="main">
-      <ul id="repositories"></ul>
+      <div id="right">
+        <ul id="repositories">
+          <li class="loading">Loading repositories...</li>
+        </ul>
+      </div>
     </div>
-
-    <p id="footer">copyright &copy; 2011 <a href="http://kflorence.com/">kyle florence</a></p>
   </body>
 </html>
